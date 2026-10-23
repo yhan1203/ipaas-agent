@@ -5,6 +5,8 @@ on:
     tags:
       - 'v*'
       - 'pre-*'
+  # 允许在 Actions 页面手动重跑一次发布构建（例如某个平台产物需要重建时）
+  workflow_dispatch:
 
 jobs:
   build:
