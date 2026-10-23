@@ -71,10 +71,10 @@ jobs:
       
       - uses: actions/download-artifact@v8
         with:
-        pattern: binaries-*
-        # 平铺到同一目录，避免每个 artifact 一个子目录导致下面的 glob 匹配不到
-        merge-multiple: true
-        path: dist
+          pattern: binaries-*
+          # 平铺到同一目录，避免每个 artifact 一个子目录导致下面的 glob 匹配不到
+          merge-multiple: true
+          path: dist
 
       - name: Create Release
         uses: softprops/action-gh-release@v3
